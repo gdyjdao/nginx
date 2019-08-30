@@ -217,7 +217,11 @@
     NULL, 0, 0, nginx_version, NGX_MODULE_SIGNATURE
 
 #define NGX_MODULE_V1_PADDING  0, 0, 0, 0, 0, 0, 0, 0
-
+typedef struct {
+	ngx_str_t             name;
+	void               *(*create_conf)(ngx_cycle_t *cycle);
+	char               *(*init_conf)(ngx_cycle_t *cycle, void *conf);
+} ngx_core_module_t;
 
 struct ngx_module_s {
     ngx_uint_t            ctx_index;
@@ -231,7 +235,7 @@ struct ngx_module_s {
     ngx_uint_t            version;
     const char           *signature;
 
-    void                 *ctx;
+	void                 *ctx;
     ngx_command_t        *commands;
     ngx_uint_t            type;
 
@@ -255,13 +259,6 @@ struct ngx_module_s {
     uintptr_t             spare_hook6;
     uintptr_t             spare_hook7;
 };
-
-
-typedef struct {
-    ngx_str_t             name;
-    void               *(*create_conf)(ngx_cycle_t *cycle);
-    char               *(*init_conf)(ngx_cycle_t *cycle, void *conf);
-} ngx_core_module_t;
 
 
 ngx_int_t ngx_preinit_modules(void);
