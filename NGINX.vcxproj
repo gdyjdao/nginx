@@ -138,6 +138,8 @@
     <ClCompile Include="src\os\win32\ngx_wsasend.c" />
     <ClCompile Include="src\os\win32\ngx_wsasend_chain.c" />
     <ClCompile Include="src\os\win32\ngx_dlopen.c" />
+    <ClCompile Include="third\test\mytest.cpp" />
+    <ClCompile Include="third\test\test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\core\nginx.h" />
@@ -211,6 +213,8 @@
     <ClInclude Include="src\os\win32\ngx_user.h" />
     <ClInclude Include="src\os\win32\ngx_win32_config.h" />
     <ClInclude Include="src\os\win32\ngx_dlopen.h" />
+    <ClInclude Include="third\common.hpp" />
+    <ClInclude Include="third\test\test.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D18B976A-0569-4BEC-8A4A-FFBFF436E92D}</ProjectGuid>

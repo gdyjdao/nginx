@@ -108,6 +108,7 @@ ngx_module_t *ngx_modules[] = {
 };
 
 // ----- tzz add start
+#if NGX_WIN32
 char * ngx_module_names[] = {
 	"ngx_core_module",
 	"ngx_errlog_module",
@@ -160,5 +161,5 @@ char * ngx_module_names[] = {
 	"ngx_http_not_modified_filter_module",
 	"NULL"
 };
-
+#endif
 // ----- tzz add end

@@ -55,6 +55,12 @@
     <Filter Include="Header Files\os\win32">
       <UniqueIdentifier>{b5011b4d-d56a-45b0-aa61-e18ddae67a67}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\third">
+      <UniqueIdentifier>{eaf4ac99-0e2c-46d7-b4ff-aa65b7368e9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\third\test">
+      <UniqueIdentifier>{95da5fdc-28e0-4ec5-b089-349195a30425}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\core\nginx.c">
@@ -327,12 +333,6 @@
     <ClCompile Include="src\http\modules\ngx_http_memcached_module.c">
       <Filter>Source Files\http\modules</Filter>
     </ClCompile>
-    <ClCompile Include="config\ngx_modules.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="config\ngx_pch.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\event\ngx_event.c">
       <Filter>Source Files\event</Filter>
     </ClCompile>
@@ -401,6 +401,30 @@
     </ClCompile>
     <ClCompile Include="src\event\modules\ngx_win32_select_module.c">
       <Filter>Source Files\event\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\event\ngx_event_udp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ngx_modules.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ngx_pch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ngx_module.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ngx_sha1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\os\win32\ngx_dlopen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="third\test\mytest.cpp">
+      <Filter>Source Files\third\test</Filter>
+    </ClCompile>
+    <ClCompile Include="third\test\test.cpp">
+      <Filter>Source Files\third\test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -604,6 +628,24 @@
     </ClInclude>
     <ClInclude Include="src\os\win32\ngx_win32_config.h">
       <Filter>Header Files\os\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ngx_module.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ngx_auto_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ngx_auto_headers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\os\win32\ngx_dlopen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="third\test\test.hpp">
+      <Filter>Source Files\third\test</Filter>
+    </ClInclude>
+    <ClInclude Include="third\common.hpp">
+      <Filter>Source Files\third</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
